@@ -2,8 +2,8 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
-        // merge minify js
-        uglify: {
+        // concat js
+        concat: {
 
             global: {
                 options: {
@@ -14,12 +14,7 @@ module.exports = function(grunt) {
                         'assets/Diaspora.js'
                     ]
                 }
-            }
-
-        },
-
-        // concat js
-        concat: {
+            },
 
             plugin: {
 
@@ -37,14 +32,10 @@ module.exports = function(grunt) {
                     ]
                 }
 
-            }
+            },
 
-        },
+            css: {
 
-        // merge minify css
-        cssmin: {
-
-            global: {
                 options: {
                     banner: '/* http://lorem.in  @author LoeiFy@gmail.com */ \n'
                 },
@@ -57,6 +48,7 @@ module.exports = function(grunt) {
                         'assets/base.css'
                     ]
                 }
+
             }
 
         },
@@ -80,24 +72,6 @@ module.exports = function(grunt) {
                 files: [
                     {src: ['_header.php'], dest: 'header.php'}
                 ]
-            },
-
-            dev: {
-                options: {
-                    patterns: [
-                        {
-                            match: 'css',
-                            replacement: ''
-                        },
-                        {
-                            match: 'static',
-                            replacement: '<%= grunt.file.read("assets/dev.html") %>'
-                        }
-                    ]
-                },
-                files: [
-                    {src: ['_header.php'], dest: 'header.php'}
-                ]
             }
 
         }
@@ -105,12 +79,9 @@ module.exports = function(grunt) {
     });
 
     // grunt plugin
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-replace');
-    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-replace')
+    grunt.loadNpmTasks('grunt-contrib-concat')
 
-    grunt.registerTask('default', ['uglify', 'concat', 'cssmin', 'replace:basket']);
-    grunt.registerTask('dev', ['replace:dev']);
+    grunt.registerTask('default', ['concat', 'replace'])
 
 };
