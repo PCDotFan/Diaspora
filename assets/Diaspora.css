@@ -232,6 +232,9 @@ body.touch #top {
     left: 14px;
     top: 16px;
 }
+.icon-icon:before {
+    display: none;
+}
 .subtitle {
     color: #666;
     font-size: 14px;

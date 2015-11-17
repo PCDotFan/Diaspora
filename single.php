@@ -18,7 +18,9 @@
 
     <div id="top">
         <div class="bar"></div>
-        <a class="icon-icon" href="javascript:history.back()"></a>
+        <a class="icon-icon" href="javascript:history.back()">
+            <img width="24" src="<?php echo get_template_directory_uri(); ?>/static/72.png" />
+        </a>
         <div title="播放/暂停" data-id="<?php the_ID() ?>" class="icon-play"></div>
         <div title="查看壁纸" class="icon-images"></div>
 		<h3 class="subtitle"><?php the_title(); ?></h3>

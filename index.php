@@ -25,7 +25,7 @@
         </div>
 
         <div id="header"><div>
-            <a class="icon-logo" href="/"></a>
+            <a href="/"><img width="50" src="<?php echo get_template_directory_uri(); ?>/static/114.png" /></a>
             <div class="icon-menu switchmenu"></div>
         </div></div>
         <div id="post0">
