@@ -66,6 +66,7 @@ add_action('init', 'register_menu');
 
 // FEATURED IMAGE SUPPORT
 add_theme_support( 'post-thumbnails', array( 'post' ) );
+add_image_size( 'cover', 680, 440, true );
 
 // NEXT PAGE CLASS
 add_filter('next_posts_link_attributes', 'posts_link_attributes');

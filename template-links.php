@@ -10,7 +10,9 @@ Template Name: links
 <?php while ( have_posts() ) : the_post(); ?>
 
     <div id="top">
-        <a class="icon-icon" href="javascript:history.back()"></a>
+        <a class="icon-icon" href="javascript:history.back()">
+            <img width="24" src="<?php echo get_template_directory_uri(); ?>/static/72.png" />
+        </a>
     </div>
 
     <div class="section">
