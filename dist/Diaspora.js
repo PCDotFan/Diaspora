@@ -116,6 +116,10 @@ var Diaspora = {
                         $('.downloadlink').attr('href', $(this).parent().attr('href'))
                     }
                 })
+
+                if (flag == 'replace') {
+                    $('#top').show()
+                }
             }, 0)
 
         })
